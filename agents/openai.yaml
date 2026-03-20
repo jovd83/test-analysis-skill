@@ -1,0 +1,7 @@
+interface:
+  display_name: "Requirements Test Analysis"
+  short_description: "Review requirements before implementation and test design"
+  default_prompt: "Use $test-analysis-skill to review this requirement for testability, ambiguity, delivery risk, and missing stakeholder decisions."
+
+policy:
+  allow_implicit_invocation: true

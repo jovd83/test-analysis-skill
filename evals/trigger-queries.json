@@ -1,0 +1,62 @@
+[
+  {
+    "query": "Review this user story for ambiguity, missing stakeholder decisions, and testability before engineering starts.",
+    "should_trigger": true,
+    "reason": "Direct requirement-quality analysis request."
+  },
+  {
+    "query": "Can you assess whether these acceptance criteria are testable and what clarifications we need from product?",
+    "should_trigger": true,
+    "reason": "Explicit request for testability and stakeholder questions."
+  },
+  {
+    "query": "We need a risk-based review of this checkout use case before release planning.",
+    "should_trigger": true,
+    "reason": "Requirement-level risk analysis is in scope."
+  },
+  {
+    "query": "Analyze this functional spec for hidden gaps, contradictory rules, and missing recovery paths.",
+    "should_trigger": true,
+    "reason": "Static review and gap analysis are core capabilities."
+  },
+  {
+    "query": "Before we write tests, tell me whether this story is actually testable.",
+    "should_trigger": true,
+    "reason": "Matches the skill's pre-test-design focus."
+  },
+  {
+    "query": "Use a senior test analyst mindset to review this requirement draft and list the stakeholder questions that block implementation.",
+    "should_trigger": true,
+    "reason": "Strong semantic match even without the exact skill name."
+  },
+  {
+    "query": "Turn this story into Playwright test cases.",
+    "should_trigger": false,
+    "reason": "Primary goal is executable test design, which the skill explicitly excludes."
+  },
+  {
+    "query": "Write the backend code for this refund workflow.",
+    "should_trigger": false,
+    "reason": "Implementation task, not requirement analysis."
+  },
+  {
+    "query": "Summarize this requirements workshop transcript into bullet points.",
+    "should_trigger": false,
+    "reason": "General summarization without requirement-quality analysis."
+  },
+  {
+    "query": "I need Gherkin scenarios for these acceptance criteria.",
+    "should_trigger": false,
+    "reason": "Scenario authoring is adjacent but outside this skill's scope."
+  },
+  {
+    "query": "Create Jira tickets for bugs we already found in production.",
+    "should_trigger": false,
+    "reason": "Issue management is not requirement analysis."
+  },
+  {
+    "query": "Write a Python script that calculates payment risk from transaction logs.",
+    "should_trigger": false,
+    "reason": "Coding request with a different notion of risk."
+  }
+]

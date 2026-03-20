@@ -1,0 +1,34 @@
+from pathlib import Path
+import sys
+import tempfile
+import unittest
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+
+import validate_skill
+
+
+class ValidateSkillTests(unittest.TestCase):
+    def test_parse_frontmatter(self) -> None:
+        frontmatter, body = validate_skill.parse_frontmatter(
+            "---\nname: demo-skill\ndescription: Use when checking a demo.\n---\n# Demo\n"
+        )
+        self.assertEqual(frontmatter["name"], "demo-skill")
+        self.assertEqual(frontmatter["description"], "Use when checking a demo.")
+        self.assertEqual(body, "# Demo")
+
+    def test_validate_examples_detects_missing_pair(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            examples = root / "examples"
+            examples.mkdir()
+            (examples / "demo-requirement.md").write_text("# Demo", encoding="utf-8")
+            errors: list[str] = []
+            warnings: list[str] = []
+            validate_skill.validate_examples(root, errors, warnings)
+            self.assertTrue(errors)
+            self.assertFalse(warnings)
+
+
+if __name__ == "__main__":
+    unittest.main()
