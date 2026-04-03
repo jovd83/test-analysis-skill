@@ -153,7 +153,6 @@ def validate_required_paths(root: Path, errors: list[str]) -> None:
         ".github/workflows/ci.yml",
         ".gitignore",
         "README.md",
-        "CONTRIBUTING.md",
         "CHANGELOG.md",
         "memory/requirement-antipatterns.md",
         "references/analysis-framework.md",

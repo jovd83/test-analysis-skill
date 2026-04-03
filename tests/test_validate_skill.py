@@ -29,6 +29,36 @@ class ValidateSkillTests(unittest.TestCase):
             self.assertTrue(errors)
             self.assertFalse(warnings)
 
+    def test_validate_required_paths_does_not_require_contributing(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            required_paths = [
+                ".github/workflows/ci.yml",
+                ".gitignore",
+                "README.md",
+                "CHANGELOG.md",
+                "memory/requirement-antipatterns.md",
+                "references/analysis-framework.md",
+                "references/risk-model.md",
+                "scripts/calculate_risk.py",
+                "scripts/export_report.py",
+                "scripts/validate_skill.py",
+                "evals/trigger-queries.json",
+                "evals/output-quality-checklist.md",
+                "tests/test_calculate_risk.py",
+                "tests/test_export_report.py",
+                "tests/test_validate_skill.py",
+            ]
+
+            for relative_path in required_paths:
+                path = root / relative_path
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("", encoding="utf-8")
+
+            errors: list[str] = []
+            validate_skill.validate_required_paths(root, errors)
+            self.assertFalse(errors)
+
 
 if __name__ == "__main__":
     unittest.main()

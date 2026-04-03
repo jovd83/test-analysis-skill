@@ -52,7 +52,6 @@ tests/
   test_export_report.py
   test_validate_skill.py
 CHANGELOG.md
-CONTRIBUTING.md
 .gitignore
 README.md
 SKILL.md
