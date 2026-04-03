@@ -6,7 +6,9 @@ The format follows Keep a Changelog with lightweight `Added`, `Changed`, and `Fi
 
 ## [Unreleased]
 
-No unreleased changes yet.
+### Added
+- `## Gotchas` section to `SKILL.md` for better LLM instruction.
+- Version, license, and 'Buy Me a Coffee' badges to `README.md`.
 
 ## [1.0.0] - 2026-03-18
 

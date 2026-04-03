@@ -1,5 +1,9 @@
 # Requirements Test Analysis Skill
 
+![version](https://img.shields.io/badge/version-1.0.0-blue)
+![license](https://img.shields.io/badge/license-MIT-green)
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/jovd83)
+
 `test-analysis-skill` is an Agent Skill for reviewing requirements before implementation or detailed test design. It helps an agent act like a disciplined senior test analyst: inspect requirement quality, assess testability, surface delivery risk, and turn ambiguity into stakeholder questions.
 
 ## What This Skill Is Responsible For
@@ -124,7 +128,7 @@ python scripts/export_report.py examples/pos-checkout-report.md --output pos-che
 - Ticket import JSON is supported as an output format, not as a live connector.
 - HTML export is bundled; PDF and Word remain downstream conversions.
 - Shared memory is an external integration boundary, not an embedded subsystem in this skill.
-- A license file is not included yet, because legal terms should be chosen intentionally by the maintainer.
+- A license file is provided (MIT License).
 
 ## Standards Alignment
 

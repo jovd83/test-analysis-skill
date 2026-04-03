@@ -59,6 +59,14 @@ Read one matching example from `examples/` only when you need a formatting exemp
 - Do not modify project-local memory during normal analysis. Propose memory updates in the report; only persist them when the user explicitly approves a repository or skill update.
 - Do not present opinions as facts. Mark inferred concerns as analysis or likely implications.
 
+## Gotchas
+
+- **Confusing Risk and Gaps**: A gap is a missing piece of information (e.g., "What happens if X fails?"); a risk is a potential negative outcome (e.g., "If X fails, the system crashes"). Keep them in their respective sections.
+- **Soft Scoring**: Avoid giving high scores just because a requirement is "good enough" for a small project. Use the rubrics in `references/analysis-framework.md` strictly.
+- **Prescriptive Recommendations**: Recommendations should focus on clarifying or improving the requirement text, not on providing technical implementation designs (e.g., suggest "Define timeout behavior" instead of "Use a try-catch block").
+- **Generic Summaries**: Ensure the Executive Summary is specific to the artifact analyzed and doesn't read like a generic template.
+- **Prompting for Input**: If the user mentions a requirement but hasn't pasted it or provided a file path, don't generate a placeholder review. Stop and ask for the material.
+
 ## Analysis Outputs
 
 Produce only the sections the user requested. If scope is unspecified, include all sections below.
