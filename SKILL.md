@@ -66,6 +66,9 @@ Read one matching example from `examples/` only when you need a formatting exemp
 - **Prescriptive Recommendations**: Recommendations should focus on clarifying or improving the requirement text, not on providing technical implementation designs (e.g., suggest "Define timeout behavior" instead of "Use a try-catch block").
 - **Generic Summaries**: Ensure the Executive Summary is specific to the artifact analyzed and doesn't read like a generic template.
 - **Prompting for Input**: If the user mentions a requirement but hasn't pasted it or provided a file path, don't generate a placeholder review. Stop and ask for the material.
+- **Vague Adjectives**: Don't overlook terms like "fast," "simple," or "intuitive." These are testability gaps. Flag them as ambiguities and suggest measurable thresholds.
+- **Missing NFRs**: Look for missing non-functional requirements (performance, security, accessibility) that are implicit in the domain but missing from the text.
+- **Disconnected Findings**: Ensure every finding in the Static Review or Risk Assessment maps back to a specific part of the requirement text or a clearly defined gap. Avoid "floating" critiques without evidence.
 
 ## Analysis Outputs
 
