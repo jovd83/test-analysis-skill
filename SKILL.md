@@ -4,8 +4,15 @@ description: Use when reviewing use cases, user stories, acceptance criteria, bu
 metadata:
   author: jovd83
   version: 1.0.0
+  dispatcher-output-artifacts: analysis_report, ambiguity_findings, risk_summary
+  dispatcher-risk: low
+  dispatcher-writes-files: true
+  dispatcher-input-artifacts: requirements, acceptance_criteria, business_rules, project_context
+  dispatcher-capabilities: requirements-test-analysis, ambiguity-review, delivery-risk-analysis
+  dispatcher-stack-tags: analysis, testing, requirements
+  dispatcher-accepted-intents: analyze_requirements_for_testability, review_requirement_quality, assess_delivery_risk
+  dispatcher-category: analysis
 ---
-
 # Requirements Test Analysis
 
 Analyze requirement quality before implementation starts. Produce a decision-ready review that helps product, engineering, and QA teams spot ambiguity, hidden risk, and missing information early.
