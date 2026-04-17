@@ -2,8 +2,8 @@
 name: test-analysis-skill
 description: Use when reviewing use cases, user stories, acceptance criteria, business requirements, or functional specifications for testability, ambiguity, requirement quality, delivery risk, or missing stakeholder decisions before implementation or detailed test design. Use for static requirement reviews, risk-based analysis, and readiness triage. Do not use when the primary goal is writing executable test cases or application code.
 metadata:
-    dispatcher-layer: execution
-    dispatcher-lifecycle: active
+  dispatcher-layer: execution
+  dispatcher-lifecycle: active
   author: jovd83
   version: 1.1.0
   dispatcher-output-artifacts: analysis_report, ambiguity_findings, risk_summary
