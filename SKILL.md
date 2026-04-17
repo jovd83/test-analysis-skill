@@ -15,15 +15,15 @@ metadata:
   dispatcher-accepted-intents: analyze_requirements_for_testability, review_requirement_quality, assess_delivery_risk
   dispatcher-category: analysis
 ---
-# Requirements Test Analysis
-
-Analyze requirement quality before implementation starts. Produce a decision-ready review that helps product, engineering, and QA teams spot ambiguity, hidden risk, and missing information early.
-
 
 ## Telemetry & Logging
 > [!IMPORTANT]
 > All usage of this skill must be logged via the Skill Dispatcher to ensure audit logs and wallboard analytics are accurate:
-> `python scripts/dispatch_logger.py --skill <skill_name> --intent <intent> --reason <reason>`
+> `./log-dispatch.cmd --skill <skill_name> --intent <intent> --reason <reason>` (or `./log-dispatch.sh` on Linux)
+
+# Requirements Test Analysis
+
+Analyze requirement quality before implementation starts. Produce a decision-ready review that helps product, engineering, and QA teams spot ambiguity, hidden risk, and missing information early.
 
 ## Scope
 
