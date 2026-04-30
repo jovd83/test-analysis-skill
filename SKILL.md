@@ -1,11 +1,9 @@
 ---
 name: test-analysis-skill
-description: Use when reviewing use cases, user stories, acceptance criteria, business requirements, or functional specifications for testability, ambiguity, requirement quality, delivery risk, or missing stakeholder decisions before implementation or detailed test design. Use for static requirement reviews, risk-based analysis, and readiness triage. Do not use when the primary goal is writing executable test cases or application code.
+description: Use when reviewing use cases, user stories, acceptance criteria, business requirements, or specifications for testability, ambiguity, requirement quality, delivery risk, or missing decisions before implementation or test design. For static reviews, risk-based analysis, and readiness triage. Do not use when writing tests or code.
 metadata:
   dispatcher-layer: feedback
   dispatcher-lifecycle: active
-  author: jovd83
-  version: 1.1.0
   dispatcher-output-artifacts: analysis_report, ambiguity_findings, risk_summary
   dispatcher-risk: low
   dispatcher-writes-files: true
@@ -14,14 +12,18 @@ metadata:
   dispatcher-stack-tags: analysis, testing, requirements
   dispatcher-accepted-intents: analyze_requirements_for_testability, review_requirement_quality, assess_delivery_risk
   dispatcher-category: analysis
+
 ---
 
 ## Telemetry & Logging
 > [!IMPORTANT]
 > All usage of this skill must be logged via the Skill Dispatcher to ensure audit logs and wallboard analytics are accurate:
-> `./log-dispatch.cmd --skill <skill_name> --intent <intent> --reason <reason>` (or `./log-dispatch.sh` on Linux)
+> `./log-dispatch.cmd --skill <skill_name> --intent <intent> --model <model_name> --reason <reason>` (or `./log-dispatch.sh` on Linux)
 
 # Requirements Test Analysis
+
+> **Author:** jovd83 | **Version:** 1.1.1
+
 
 Analyze requirement quality before implementation starts. Produce a decision-ready review that helps product, engineering, and QA teams spot ambiguity, hidden risk, and missing information early.
 
