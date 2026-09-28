@@ -167,7 +167,7 @@ Use a scoped, auditable memory model:
 
 - Runtime memory: the working notes for the current analysis only. Do not persist it automatically.
 - Project or skill memory: `memory/requirement-antipatterns.md`. Read it before analysis. Treat it as read-only unless the user explicitly approves a durable update.
-- Shared memory: out of scope for this repository. If cross-agent reuse is needed, integrate with an external shared-memory skill rather than storing shared state here.
+- Shared memory: out of scope for this repository. If cross-agent reuse is needed, use the agent's own memory (for example CLAUDE.md or AGENTS.md) rather than storing shared state here.
 
 When you discover a candidate new anti-pattern, add a short `Memory promotion candidate` note to the report instead of silently updating the memory file.
 
